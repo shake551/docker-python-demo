@@ -1,0 +1,13 @@
+version: '3'
+services:
+  python3:
+    restart: always
+    build: .
+    container_name: 'docker_python_demo'
+    working_dir: '/root/'
+    tty: true
+    volumes:
+      - ./opt:/root/opt
+    ports: 
+      - 8000:8000
+    command: python opt/manage.py runserver 0:8000
