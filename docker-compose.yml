@@ -10,4 +10,4 @@ services:
       - ./opt:/root/opt
     ports: 
       - 8000:8000
-    command: python opt/manage.py runserver 0:8000
+    command: python opt/manage.py runserver
